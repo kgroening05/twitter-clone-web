@@ -1,0 +1,51 @@
+:root {
+    --thin-border: 1px solid darkgray;
+    --light-border: 1px solid lightgray;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+section.login h2 {
+    align-self: flex-start;
+    padding-left: 8px;
+}
+
+section.login p {
+    font-size: 0.85rem;
+    color: darkgray;
+    text-align: left;
+}
+
+section.login {
+    display: flex;
+    flex-direction: column;
+    border: var(--light-border);
+    border-radius: 20px;
+    max-width: 350px;
+    padding: 8px;
+    gap: 10px;
+}
+
+section.login button {
+    width: 100%;
+    padding: 10px 32px;
+    border-radius: 32px;
+    background: none;
+    border: var(--thin-border);
+    font-size: 1.0rem;
+    font-weight: bold;
+    transition: background-color 0.1s ease-in-out;
+}
+
+section.login button:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+section.login a {
+    text-decoration: none;
+}
+
