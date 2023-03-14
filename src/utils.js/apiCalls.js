@@ -1,5 +1,5 @@
 export async function getPosts(){
-    const response = await fetch(`${domain}api/posts`)
+    const response = await fetch(`${domain}api/posts`, {credentials: 'include'})
     const posts = await response.json()
     return posts
 }
