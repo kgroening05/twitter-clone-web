@@ -1,9 +1,9 @@
-import { newPostURI } from "../utils.js/apiCalls"
+import { addTweet } from "../utils.js/apiCalls"
 
 export default function AddTweetForm(){
     return (
-        <form action={ newPostURI } method='POST'>
-            <input type="text" placeholder="What's happening?"/>
+        <form onSubmit={ addTweet }>
+            <input type="text" name="tweet" placeholder="What's happening?"/>
             <button type="submit">Tweet</button>
         </form>
     )
