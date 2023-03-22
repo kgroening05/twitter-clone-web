@@ -3,6 +3,7 @@ import { Outlet } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import AddTweetForm from '../components/AddTweetForm';
 import LoginForm from '../components/LoginForm';
+import EditUserDetailsForm from '../components/EditUserDetailsForm';
 
 function App() {
 
@@ -16,7 +17,7 @@ function App() {
       setUser(result)
     })
   
-  }, [  ])
+  }, [])
 
   return (
     <div className="App">
@@ -24,12 +25,10 @@ function App() {
       
       </header>
       <main>
-        <p>{user.email}</p>
-        <a href="http://localhost:3001/api/login/token-check">Get User</a>
         <AddTweetForm />
         <LoginForm />
         <Outlet />
-
+        <EditUserDetailsForm user={user} />
       </main>
     </div>
   );
