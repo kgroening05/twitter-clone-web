@@ -17,7 +17,7 @@ export default function Feed() {
       {
         posts
         ? posts.map((el)=>{
-          return(<FeedCard author={ 'default'} body={el.body} id={el._id} />)
+          return(<FeedCard author={ el.author.username } body={el.body} id={el._id} profilePic={el.author.profilePic}/>)
         })
         : <p>nothin</p>
       }
