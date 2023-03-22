@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import AddTweetForm from '../components/AddTweetForm';
 import LoginForm from '../components/LoginForm';
 import EditUserDetailsForm from '../components/EditUserDetailsForm';
+import Navbar from '../components/Navbar';
 
 function App() {
 
@@ -22,7 +23,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-      
+        <Navbar />
       </header>
       <main>
         <AddTweetForm />
