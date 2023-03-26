@@ -1,0 +1,28 @@
+
+.tweet-card {
+    display: flex;
+    border: 1px solid rgb(241, 241, 241);
+    padding: 10px;
+    gap: 30px;
+    max-width: 600px;
+
+}
+
+.tweet-text .author {
+    font-weight: 500;
+    text-align: left;
+    padding-bottom: 4px;
+    font-size: 12pt;
+}
+
+.tweet-text .tweet {
+    font-weight: 300;
+    text-align: left;
+}
+
+.profile-pic {
+    width: 3rem;
+    aspect-ratio: 1;
+    border-radius: 1.5rem;
+}
+
