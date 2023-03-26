@@ -1,14 +1,12 @@
 import './App.css';
 import { Outlet } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import AddTweetForm from '../components/AddTweetForm';
 import LoginForm from '../components/LoginForm';
-import EditUserDetailsForm from '../components/EditUserDetailsForm';
 import Navbar from '../components/Navbar';
 
 function App() {
 
-  const [ user, setUser ] = useState('user');
+  const [ user, setUser ] = useState(null);
 
   useEffect(() => {
     console.log('fetching')
@@ -23,14 +21,18 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Navbar />
+        <Navbar user={user}/>
       </header>
       <main>
-        <AddTweetForm />
-        <LoginForm />
-        <Outlet />
-        <EditUserDetailsForm user={user} />
+        <Outlet context={[user, setUser]}/>
       </main>
+      <section className='sidebar'>
+        {
+          user
+          ? null
+          : <LoginForm />
+        }
+      </section>
     </div>
   );
 }
