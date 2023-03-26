@@ -1,9 +1,10 @@
 import { useState } from "react"
 import axios from "axios"
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useOutletContext } from 'react-router-dom'
 
-export default function EditUserDetailsForm({ user }){
+export default function EditUserDetailsForm(){
 
+    const [ user ] = useOutletContext()
     const [ username, setUsername ] = useState(user.username);
     const [ email, setEmail ] = useState(user.email);
     
