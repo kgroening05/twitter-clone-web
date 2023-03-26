@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom"
 import './Navbar.css'
+import { logout } from "../utils.js/apiCalls"
 
-export default function Navbar(){
+export default function Navbar({ user }){
     return(
         <nav>
             <ul>
@@ -31,6 +32,11 @@ export default function Navbar(){
                     </li>
                 </Link>
             </ul>
+            {
+                user
+                ? <button onClick={logout}>Log Out</button>
+                : null
+            }
         </nav>
     )
 }
