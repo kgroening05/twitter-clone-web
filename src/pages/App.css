@@ -1,5 +1,9 @@
 .App {
   text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-areas: 
+  "nav outlet sidebar";
 }
 
 .App-logo {
@@ -13,6 +17,18 @@
   }
 }
 
+main {
+  grid-area: outlet;
+}
+
+section.sidebar {
+  grid-area: sidebar;
+}
+
+header {
+  grid-area: nav;
+  position: fixed;
+}
 
 
 .App-link {
@@ -26,4 +42,14 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+body {
+  display: flex;
+  justify-content: center;
+
+}
+
+#root {
+  max-width: 1600px;
 }
