@@ -4,7 +4,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import './index.css';
 import App from './pages/App';
 import ErrorPage from './pages/ErrorPage';
-import Feed from './components/Feed';
+import Home from './pages/Home';
+import EditUserDetailsForm from './components/EditUserDetailsForm';
 
 const router = createBrowserRouter([
   {
@@ -14,8 +15,12 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Feed />,
+        element: <Home />,
       },
+      {
+        path: '/settings',
+        element: <EditUserDetailsForm />
+      }
     ],
   },
 
