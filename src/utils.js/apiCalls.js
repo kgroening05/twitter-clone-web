@@ -35,6 +35,13 @@ export async function addTweet(event){
         {tweet},
     )
     if(update.data.success){
-        console.log('success')
+        console.log('added tweet')
+        return 1
     }
+}
+
+export function logout(){
+    axios.post('/api/logout')
+    window.location.href = '/'
+    
 }
