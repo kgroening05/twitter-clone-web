@@ -1,0 +1,42 @@
+# fly.toml file generated for twitter-clone-frontend-kg on 2023-03-26T20:50:07-04:00
+
+app = "twitter-clone-frontend-kg"
+kill_signal = "SIGINT"
+kill_timeout = 5
+primary_region = "bos"
+processes = []
+
+[env]
+
+[experimental]
+  allowed_public_ports = []
+  auto_rollback = true
+
+[[services]]
+  http_checks = []
+  internal_port = 80
+  processes = ["app"]
+  protocol = "tcp"
+  script_checks = []
+  [services.concurrency]
+    hard_limit = 25
+    soft_limit = 20
+    type = "connections"
+
+  [[services.ports]]
+    handlers = ["http"]
+    port = 80
+
+  [[services.ports]]
+    handlers = ["tls", "http"]
+    port = 443
+
+  [[services.tcp_checks]]
+    grace_period = "1s"
+    interval = "15s"
+    restart_limit = 0
+    timeout = "2s"
+
+[[statics]]
+  guest_path = "/usr/share/nginx/html/"
+  url_prefix = "/"
