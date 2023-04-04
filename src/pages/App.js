@@ -12,14 +12,11 @@ function App() {
   useEffect(() => {
     console.log('fetching')
     fetch(`${domain}api/login/token-check`,{ credentials: 'include' })
-    //fetch(`http://localhost:3001/api/login/token-check`,{ credentials: 'include' })
     .then(response => {
       return response.json()
     })
     .catch(err => console.log(err))
     .then(result => {
-      console.log('app useEffect')
-      console.log(result)
       setUser(result)
     })
   
