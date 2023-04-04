@@ -23,6 +23,7 @@ main {
 
 section.sidebar {
   grid-area: sidebar;
+  padding: 10px;
 }
 
 header {
