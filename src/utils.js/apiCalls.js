@@ -1,6 +1,7 @@
 import axios from "axios"
 
-export const domain = 'http://localhost:3001/'
+//export const domain = 'http://localhost:3001/'
+export const domain = 'https://twitter-clone-backend-kg.fly.dev/'
 export const newPostURI = `${domain}api/posts/new-post`
 export const googleAuth = `${domain}api/login/google-auth`
 
