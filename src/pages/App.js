@@ -3,6 +3,7 @@ import { Outlet } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import LoginForm from '../components/LoginForm';
 import Navbar from '../components/Navbar';
+import { domain } from '../utils.js/apiCalls';
 
 function App() {
 
@@ -10,9 +11,15 @@ function App() {
 
   useEffect(() => {
     console.log('fetching')
-    fetch(`http://localhost:3001/api/login/token-check`,{ credentials: 'include' })
-    .then(response => response.json())
+    fetch(`${domain}api/login/token-check`,{ credentials: 'include' })
+    //fetch(`http://localhost:3001/api/login/token-check`,{ credentials: 'include' })
+    .then(response => {
+      return response.json()
+    })
+    .catch(err => console.log(err))
     .then(result => {
+      console.log('app useEffect')
+      console.log(result)
       setUser(result)
     })
   
