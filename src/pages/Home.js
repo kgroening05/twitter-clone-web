@@ -2,6 +2,7 @@ import Feed from '../components/Feed';
 import AddTweetForm from '../components/AddTweetForm';
 import { useState } from 'react';
 import { useOutletContext } from "react-router-dom"
+import Searchbar from '../components/Searchbar';
 
 export default function Home () {
     const [ user ] = useOutletContext()
@@ -9,7 +10,7 @@ export default function Home () {
 
     return (
         <>
-            <h1>Home</h1>
+            <Searchbar />
             {
                 user
                 ? <AddTweetForm user={user} setUpdateTweets={setUpdateTweets} updateTweets={updateTweets} />
