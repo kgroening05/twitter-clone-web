@@ -5,7 +5,7 @@ A React-based frontend for a Twitter Clone app.
 Check out the backend here: <https://github.com/kgroening05/twitter-clone>
 
 ## Live Link
-Coming soon!
+<https://twitter-clone-frontend-kg.fly.dev/>
 
 ## How to Run
 * Clone the repo
