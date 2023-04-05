@@ -1,0 +1,14 @@
+#searchbar {
+    padding: 10px 24px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(240, 240, 240);
+    font-size: 1.05rem;
+    flex: auto;
+
+}
+
+.search-container {
+    display: flex;
+    justify-content: stretch;
+}
